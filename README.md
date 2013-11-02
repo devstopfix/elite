@@ -1,7 +1,7 @@
 devstopfix.elite
 ================
 
-A [Clojure](http://clojure.org/) library that generates a lazy sequence of [planet](http://en.wikipedia.org/wiki/Planet) names from the orginal [Elite video game](http://en.wikipedia.org/wiki/Elite_(video_game)).
+A [Clojure](http://clojure.org/) library that generates a lazy sequence of [planet](http://en.wikipedia.org/wiki/Planet) names from the orginal [Elite video game][1].
 
 ## Credits
 
@@ -24,3 +24,6 @@ I wrote this to learn how to use a [lazy-seq](http://clojure.github.io/clojure/c
 ## License
 
 This clojure code is Copyright © 2013 J Every and distributed under the Eclipse Public License version 1.0.
+
+
+ [1]: http://en.wikipedia.org/wiki/Elite_(video_game)

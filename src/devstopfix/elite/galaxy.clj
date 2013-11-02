@@ -1,6 +1,7 @@
-(ns devstopfix.elite.galaxy)
+(ns devstopfix.elite.galaxy
+	(import java.util.Random))
 ;
-; A galaxy is defined by a Vector of 3 16-bit Integers.
+; A galaxy is defined by a Vector of three 16-bit Integers.
 (def elite-galaxy-1-seed [0x5A4A 0x0248 0xB753])
 
 ; http://www.z80.info/z80syntx.htm#RLC
@@ -29,3 +30,7 @@
 (defn random-galaxy-seed []
 	"Generate the seed for a random galaxy"
 	(vec (for [i (range 3)] (rand-int 65536))))
+
+(defn pseudo-random-galaxy-seed [^Random pseudo-random]
+	"Generate the seed for a galaxy from a seeded pseudo-random number generator"
+	(vec (for [i (range 3)] (. pseudo-random nextInt 65536))))

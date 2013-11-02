@@ -2,7 +2,7 @@
 	[:use [devstopfix.elite.fib :only [quadruple-seed]]]
 	[:require [devstopfix.elite [galaxy :as galaxy]
 	                            [planets :as planets]]]
-	[:import java.lang.Character])
+	[:import java.util.Random])
 
 (defn planets-in-elite-galaxy [galaxy-number]
 	"Get a lazy, infinite sequence of planet names in one of the original eight Elite galaxies. 
@@ -17,4 +17,9 @@
 			(map #(take planets-per-galaxy (planets-in-elite-galaxy %)) (range 1 9))))))
 
 (defn planets-in-random-galaxy []
+	"Lazy-seq of planet names from a random galaxy"
 	(planets/planet-names (galaxy/random-galaxy-seed)))
+
+(defn planets-in-seeded-galaxy [^Random pseudo-random]
+	"Lazy-seq of planet namess from a galaxy derived from pseudo-random seed"
+	(planets/planet-names (galaxy/pseudo-random-galaxy-seed pseudo-random)))
