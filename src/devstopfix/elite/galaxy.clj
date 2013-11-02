@@ -33,4 +33,4 @@
 
 (defn pseudo-random-galaxy-seed [^Random pseudo-random]
 	"Generate the seed for a galaxy from a seeded pseudo-random number generator"
-	(vec (for [i (range 3)] (. pseudo-random nextInt 65536))))
+	(vec (for [i (range 3)] (.nextInt pseudo-random 65536))))
