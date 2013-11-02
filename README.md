@@ -1,7 +1,12 @@
-devstopfix.elite
-================
+Planet Name Generator
+=====================
 
 A [Clojure](http://clojure.org/) library that generates a lazy sequence of [planet](http://en.wikipedia.org/wiki/Planet) names from the orginal [Elite video game][1].
+
+Samples:
+* Lave
+* Isinor
+* Zaonce
 
 ## Credits
 
