@@ -9,13 +9,13 @@ The algorithm for the planet name generation is © 1984 [Ian Bell](http://www.ia
 
 ## Usage
 
-    (require ['devstopfix.elite :as 'elite])
+	(require ['devstopfix.elite :as 'elite])
 
-    (take 256 
-      (elite/planets-in-elite-galaxy 1))
+	(take 256 
+	  (elite/planets-in-elite-galaxy 1))
 
-    (take 256 
-      (elite/planets-in-random-galaxy))
+	(take 256 
+	  (elite/planets-in-random-galaxy))
 
 ## Learning
 
