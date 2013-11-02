@@ -30,7 +30,6 @@ I wrote this to learn how to use a [lazy-seq](http://clojure.github.io/clojure/c
 
 ## License
 
-This clojure code is Copyright © 2013 J Every and distributed under the Eclipse Public License version 1.0.
-
+The algorithm is Copyright 1984/1999 of Ian Bell and David Braben. This clojure code is Copyright © 2013 J Every and distributed under the GNU GENERAL PUBLIC LICENSE version 3.0.
 
  [1]: http://en.wikipedia.org/wiki/Elite_(video_game)
