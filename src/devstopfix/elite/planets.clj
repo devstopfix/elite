@@ -24,10 +24,13 @@
 	(* 2 (bit-and (bit-shift-right (last seed) 8) 0x1F)))
 
 (defn title-case-chars [chars]
-	"Convert a list of Characters into a string into Title case."
-	(apply str 
-		(Character/toUpperCase (first chars)) 
-		(map #(Character/toLowerCase %) (rest chars))))
+	"Convert a list of Characters into a string into Title case. It is possible to get an empty
+	 planet name due to dropped characters!"
+	(if (empty? chars)
+		""
+		(apply str 
+			(Character/toUpperCase (first chars)) 
+			(map #(Character/toLowerCase %) (rest chars)))))
 
 (defn planet-name-and-next-seed [seed]
 	"Generate the planet name from the seed, and return the name and the seed to be used for the next planet"

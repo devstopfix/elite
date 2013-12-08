@@ -4,6 +4,9 @@
 ; A galaxy is defined by a Vector of three 16-bit Integers.
 (def elite-galaxy-1-seed [0x5A4A 0x0248 0xB753])
 
+
+(def twists-per-galaxy 131072)
+
 ; http://www.z80.info/z80syntx.htm#RLC
 (defn rlc8 [x]
     "Rotate-left circular of lowest 8 bits. 
@@ -34,3 +37,8 @@
 (defn pseudo-random-galaxy-seed [^Random pseudo-random]
 	"Generate the seed for a galaxy from a seeded pseudo-random number generator"
 	(vec (for [i (range 3)] (.nextInt pseudo-random 65536))))
+
+(defn format-galaxy-seed [galaxy]
+	"Format the three Words as hexadecimal."
+	(map #(format "0x%04x" %) galaxy))
+

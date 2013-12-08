@@ -1,5 +1,4 @@
 (ns devstopfix.elite
-	[:use [devstopfix.elite.fib :only [quadruple-seed]]]
 	[:require [devstopfix.elite [galaxy :as galaxy]
 	                            [planets :as planets]]]
 	[:import java.util.Random])
@@ -21,5 +20,9 @@
 	(planets/planet-names (galaxy/random-galaxy-seed)))
 
 (defn planets-in-seeded-galaxy [^Random pseudo-random]
-	"Lazy-seq of planet namess from a galaxy derived from pseudo-random seed"
+	"Lazy-seq of planet names from a galaxy derived from pseudo-random seed"
 	(planets/planet-names (galaxy/pseudo-random-galaxy-seed pseudo-random)))
+
+(defn galactic-set [galaxy-seed]
+	"The set of all possible planet names in a galaxy."
+	(into (sorted-set) (take galaxy/twists-per-galaxy (planets/planet-names galaxy-seed))))

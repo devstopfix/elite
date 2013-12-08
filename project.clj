@@ -1,4 +1,4 @@
-(defproject devstopfix.elite "1.0.1"
+(defproject devstopfix.elite "1.0.2"
   :description "A Clojure version of the Elite planet name algorithm"
   :url "https://github.com/devstopfix/elite"
   :license {:name "GNU General Public License"

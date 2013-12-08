@@ -17,16 +17,17 @@ The algorithm for the planet name generation is © 1984 [Ian Bell](http://www.ia
 ```clj
 (require ['devstopfix.elite :as 'elite])
 
-(take 256 
-  (elite/planets-in-elite-galaxy 1))
+(take 256 (elite/planets-in-elite-galaxy 1))
 
-(take 256 
-  (elite/planets-in-random-galaxy))
+(nth (elite/planets-in-elite-galaxy 1) 7)
+; "Lave"
+
+(take 256 (elite/planets-in-random-galaxy))
 ```
 
-## Learning
+## Bugs
 
-I wrote this to learn how to use a [lazy-seq](http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/lazy-seq) and discovered the [iterate](http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/iterate) function. 
+Some seeds (e.g. [0x00d2 0x669d 0x0d37]) will create a galaxy containing a planet with no letters in the name.
 
 ## License
 
