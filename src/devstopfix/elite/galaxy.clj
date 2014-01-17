@@ -41,4 +41,3 @@
 (defn format-galaxy-seed [galaxy]
 	"Format the three Words as hexadecimal."
 	(map #(format "0x%04x" %) galaxy))
-
