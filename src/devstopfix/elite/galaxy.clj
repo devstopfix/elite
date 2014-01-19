@@ -4,7 +4,6 @@
 ; A galaxy is defined by a Vector of three 16-bit Integers.
 (def elite-galaxy-1-seed [0x5A4A 0x0248 0xB753])
 
-
 (def twists-per-galaxy 131072)
 
 ; http://www.z80.info/z80syntx.htm#RLC
